@@ -1,6 +1,13 @@
-import { Table, Thead, Tr, Th, Tbody } from './TransactionHistory.styled';
-
-import { TableRow } from 'components/TableRow/TableRow';
+import {
+  Table,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Td,
+  SecondTr,
+  Type,
+} from './TransactionHistory.styled';
 
 import PropTypes from 'prop-types';
 
@@ -33,6 +40,16 @@ export const TransactionHistory = ({ items }) => {
   );
 };
 
+const TableRow = ({ type, amount, currency, index }) => {
+  return (
+    <SecondTr idx={index}>
+      <Type>{type}</Type>
+      <Td>{amount}</Td>
+      <Td>{currency}</Td>
+    </SecondTr>
+  );
+};
+
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
@@ -42,4 +59,11 @@ TransactionHistory.propTypes = {
       currency: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
+};
+
+TableRow.propTypes = {
+  index: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };
