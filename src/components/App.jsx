@@ -1,26 +1,27 @@
-import React from 'react';
-import Profile from './Profile/Profile';
-import user from './Profile/user.json';
-import Statistics from './Statistics/Statistics';
-import statisticalData from './Statistics/statistical-data.json';
-import FriendList from './FriendList/FriendList';
-import friends from './FriendList/friends.json';
-import TransactionHistory from './TransactionHistory/TransactionHistory';
-import transactions from './TransactionHistory/transactions.json';
+import { FriendList } from './Friends/Friends/Friendlist/FriendList';
+import { Profile } from './Profile/Profile';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Statistics } from './Statistics/Statistics';
+import user from '../Data/user.json';
+import data from '../Data/data.json';
+import friends from '../Data/friends.json';
+import transactions from '../Data/transactions.json';
 
-export const App = () => (
-  <>
-    <Profile
-      name={user.name}
-      tag={user.tag}
-      location={user.location}
-      avatar={user.avatar}
-      stats={user.stats}
-    />
-    <Statistics title="Upload stats" stats={statisticalData} />
-    <FriendList friends={friends} />
-    <TransactionHistory items={transactions} />
-  </>
-);
 
-export default App;
+export const App = () => {
+  return (
+    <div>
+    
+  <Profile
+  username = {user.username}
+  tag = {user.tag}
+  location = {user.location}
+  avatar = {user.avatar}
+  stats = {user.stats} />
+  <FriendList friends={friends} />
+  <Statistics title="Upload stats" stats={data} />
+  <TransactionHistory items={transactions} />
+
+    </div>
+  );
+};

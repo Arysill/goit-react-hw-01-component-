@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-display: flex;
+  display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -13,7 +13,7 @@ display: flex;
 `;
 
 export const StatList = styled.ul`
-width: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -23,7 +23,7 @@ width: 100%;
 `;
 
 export const StatItem = styled.li`
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -34,18 +34,18 @@ display: flex;
 `;
 
 export const Title = styled.h2`
-font-size: 16px;
+  font-size: 16px;
   font-weight: 700;
-text-transform: uppercase;
+  text-transform: uppercase;
   text-align: center;
 `;
 
 export const Label = styled.span`
-font-size: 14px;
+  font-size: 14px;
   font-weight: 400;
 `;
 
 export const Percentage = styled.span`
-font-size: 14px;
-font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
 `;
